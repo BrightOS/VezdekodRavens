@@ -1,13 +1,14 @@
 package ru.beerproject.vezdekodravens
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.webkit.ValueCallback
-import android.webkit.WebChromeClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toFile
 import kotlinx.android.synthetic.main.activity_target.*
+import java.io.File
 
 /**
  * Created by artsultanmaga05@gmail.com on 12.09.2020.
@@ -21,30 +22,17 @@ class TargetActivity : AppCompatActivity() {
             Log.d("Tag", "ЕБАТЬ РФБОТАЕТ")
 
 
-            uploadMessage?.let {
-                uploadMessage!!.onReceiveValue(null)
-                uploadMessage = null
-            }
-            uploadMessage = filePathCallback
-            val intent =
-            startActivityForResult(intent, 100)
+            val intent = Intent()
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivityForResult(Intent.createChooser(intent, "Select Picture"), 100)
         }
     }
 
-
-    var uploadMessage: ValueCallback<Array<Uri>>? = null
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 100) {
-            if (uploadMessage == null) return
-            uploadMessage!!.onReceiveValue(
-                    WebChromeClient.FileChooserParams.parseResult(
-                            resultCode,
-                            data
-                    )
-            )
-            uploadMessage = null
-        }
+
+        val a = data!!.data!!.toFile()
+        choose_photo.background = Drawable.createFromPath(a.path)
     }
 }
