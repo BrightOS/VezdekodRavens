@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.type_select_activity.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_target)
+        setContentView(R.layout.activity_main)
 
         x_base_butt.setOnClickListener{
             val intent = Intent(this, TargetActivity::class.java)
