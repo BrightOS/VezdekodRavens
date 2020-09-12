@@ -119,12 +119,14 @@
                 app:layout_constraintTop_toBottomOf="@id/collect_title">
 
                 <RadioButton
+                    android:id="@+id/idk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="4dp"
                     android:text="Когда соберём сумму" />
 
                 <RadioButton
+                    android:id="@+id/until"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="4dp"
@@ -188,7 +190,8 @@
             android:textColor="@android:color/white"
             android:textSize="15sp"
             android:translationY="-0.86sp"
-            app:cornerRadius="10dp" />
+            app:cornerRadius="10dp"
+            android:alpha="0.4"/>
     </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
