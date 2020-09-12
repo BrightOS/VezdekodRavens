@@ -29,18 +29,6 @@
                 android:text="Целевой сбор"
                 android:translationY="-0.7sp" />
 
-            <View
-                android:id="@+id/separator"
-                android:layout_width="0dp"
-                android:layout_height="0.33dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="3.67dp"
-                android:background="@drawable/separator_t" />
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,59 +63,233 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <ImageView
                     android:id="@+id/icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="11dp"
                     android:src="@drawable/ic_gallery"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/text"
-                    android:layout_marginEnd="11dp"/>
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="top"
+                    android:lineSpacingExtra="1sp"
                     android:text="Загрузить обложку"
                     android:textColor="#3F8AE0"
                     android:textSize="16sp"
-                    android:lineSpacingExtra="1sp"
-                    app:layout_constraintStart_toEndOf="@id/icon"
                     android:translationY="-0.45sp"
-                    android:gravity="top"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/choose_photo"
+                app:layout_constraintEnd_toEndOf="@id/choose_photo"
+                app:layout_constraintBottom_toBottomOf="@id/choose_photo"
+                app:layout_constraintTop_toTopOf="@id/choose_photo"
+                app:cardCornerRadius="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src=""/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/first_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/choose_photo"
-                android:text="Название сбора"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
-                android:layout_marginStart="12dp"/>
+                android:text="Название сбора"
+                android:translationY="-0.65sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/choose_photo" />
 
             <EditText
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/first_title"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
                 android:id="@+id/first_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/edittext_background"
                 android:hint="Название сбора"
-                android:paddingStart="12dp"
-                android:textSize="16sp"
-                android:textColorHint="#818C99"
+                android:maxLines="1"
                 android:lineSpacingExtra="1sp"
-                android:background="@drawable/edittext_background"/>
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColorHint="#818C99"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_title" />
+
+            <TextView
+                android:id="@+id/second_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:text="Сумма, ₽"
+                android:translationY="-0.65sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_edittext" />
+
+            <EditText
+                android:id="@+id/second_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Сколько нужно собрать?"
+                android:lineSpacingExtra="1sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColorHint="#818C99"
+                android:textSize="16sp"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_title" />
+
+            <TextView
+                android:id="@+id/third_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:text="Цель"
+                android:translationY="-0.65sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_edittext" />
+
+            <EditText
+                android:id="@+id/third_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Например, лечение человека"
+                android:lineSpacingExtra="1sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColorHint="#818C99"
+                android:textSize="16sp"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_title" />
+
+            <TextView
+                android:id="@+id/fourth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:text="Описание"
+                android:translationY="-0.65sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_edittext" />
+
+            <EditText
+                android:id="@+id/fourth_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="На что пойдут деньги и как они кому-то помогут?"
+                android:lineSpacingExtra="1sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColorHint="#818C99"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourth_title" />
+
+            <TextView
+                android:id="@+id/fifth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:text="Куда получать деньги"
+                android:translationY="-0.65sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourth_edittext" />
+
+            <TextView
+                android:id="@+id/fifth_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/edittext_background"
+                android:lineSpacingExtra="1sp"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                android:text="Счёт VK Pay \u00B7 1234"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#4986CC"
+                android:fontFamily="@font/roboto"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="2sp"
+                android:text="Далее"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:translationY="-0.86sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
