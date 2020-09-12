@@ -24,9 +24,6 @@ class TargetActivity : AppCompatActivity() {
         }
 
         choose_photo.setOnClickListener {
-            Log.d("Tag", "ЕБАТЬ РФБОТАЕТ")
-
-
             val intent = Intent()
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
