@@ -18,12 +18,10 @@ class TargetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_target)
 
-        next.setOnClickListener{
-            val intent = Intent(this, TargetAdvancedActivity::class.java)
-            startActivity(intent)
-        }
-
         choose_photo.setOnClickListener {
+            Log.d("Tag", "ЕБАТЬ РФБОТАЕТ")
+
+
             val intent = Intent()
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
