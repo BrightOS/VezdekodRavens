@@ -112,25 +112,22 @@
                 android:layout_marginTop="26dp"
                 android:layout_marginStart="12dp"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/first_textfield"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+            <EditText
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/first_title"
-                app:boxCornerRadiusTopStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                android:background="#F2F3F5">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:id="@+id/first_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Название сбора"
+                android:paddingStart="12dp"
+                android:textSize="16sp"
+                android:textColorHint="#818C99"
+                android:lineSpacingExtra="1sp"
+                android:background="@drawable/edittext_background"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
