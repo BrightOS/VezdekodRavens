@@ -12,7 +12,7 @@ class TypeSelectActivity : AppCompatActivity() {
         setContentView(R.layout.type_select_activity)
 
         target.setOnClickListener{
-            val intent = Intent(this, TypeSelectActivity::class.java)
+            val intent = Intent(this, TargetActivity::class.java)
             startActivity(intent)
         }
     }
