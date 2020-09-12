@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         x_base_butt.setOnClickListener{
-            val intent = Intent(this, TargetActivity::class.java)
+            val intent = Intent(this, TypeSelectActivity::class.java)
             startActivity(intent)
         }
     }
