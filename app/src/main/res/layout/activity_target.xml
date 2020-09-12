@@ -109,17 +109,17 @@
                     <ImageView
                         android:id="@+id/image_placeholder"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent" />
 
                     <ImageView
                         android:id="@+id/close_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
                         android:src="@drawable/ic_dismiss_overlay"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -131,6 +131,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
                 android:text="Название сбора"
+                android:textColor="#6D7885"
                 android:translationY="-0.65sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/choose_photo" />
@@ -163,6 +164,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
                 android:text="Сумма, ₽"
+                android:textColor="#6D7885"
                 android:translationY="-0.65sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/first_edittext" />
@@ -195,6 +197,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
                 android:text="Цель"
+                android:textColor="#6D7885"
                 android:translationY="-0.65sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/second_edittext" />
@@ -227,6 +230,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
                 android:text="Описание"
+                android:textColor="#6D7885"
                 android:translationY="-0.65sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/third_edittext" />
@@ -258,6 +262,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="26dp"
                 android:text="Куда получать деньги"
+                android:textColor="#6D7885"
                 android:translationY="-0.65sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fourth_edittext" />
