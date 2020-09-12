@@ -20,6 +20,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <activity android:name=".TargetActivity"/>
+        <activity android:name=".TypeSelectActivity"/>
+        <activity android:name=".TargetAdvancedActivity"/>
     </application>
 
 </manifest>

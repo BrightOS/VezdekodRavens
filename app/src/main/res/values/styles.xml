@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#4986CC</item>
         <item name="colorPrimaryDark">#FFFFFF</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#4986CC</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>

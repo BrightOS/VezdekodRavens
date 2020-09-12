@@ -166,4 +166,29 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#4986CC"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="2sp"
+            android:text="Создать сбор"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:translationY="-0.86sp"
+            app:cornerRadius="10dp" />
+    </RelativeLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
