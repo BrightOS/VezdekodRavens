@@ -19,9 +19,6 @@ class TargetActivity : AppCompatActivity() {
         setContentView(R.layout.activity_target)
 
         choose_photo.setOnClickListener {
-            Log.d("Tag", "ЕБАТЬ РФБОТАЕТ")
-
-
             val intent = Intent()
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
@@ -32,7 +29,7 @@ class TargetActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        val a = data!!.data!!.toFile()
-        choose_photo.background = Drawable.createFromPath(a.path)
+        val a = data?.data?.toFile()
+        image_from_storage.setImageDrawable(Drawable.createFromPath(a?.path))
     }
 }
