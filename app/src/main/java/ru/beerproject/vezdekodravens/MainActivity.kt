@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.type_select_activity.*
+import kotlinx.android.synthetic.main.activity_type_select.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
