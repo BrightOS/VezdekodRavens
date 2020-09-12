@@ -14,6 +14,14 @@ import java.io.File
  * Created by artsultanmaga05@gmail.com on 12.09.2020.
  */
 class TargetActivity : AppCompatActivity() {
+
+    override fun onResume() {
+        next.setOnClickListener{
+            val intent = Intent(this, TargetAdvancedActivity::class.java)
+            startActivity(intent)
+        }
+        super.onResume()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_target)

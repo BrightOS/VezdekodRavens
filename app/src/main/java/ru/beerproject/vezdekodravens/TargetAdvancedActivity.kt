@@ -32,6 +32,8 @@ class TargetAdvancedActivity : AppCompatActivity() {
                     date_picker.visibility = View.GONE
                     next.alpha = 1f
                     next.setTextIsSelectable(true)
+                    date_picker.text = "Выберите дату"
+                    date_picker.setTextColor(getColor(R.color.subtext))
                 }
                 R.id.until -> {
                     date_title.visibility = View.VISIBLE
@@ -49,7 +51,7 @@ class TargetAdvancedActivity : AppCompatActivity() {
         val months: Array<String> = arrayOf("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря")
 
         date_picker.setOnClickListener {
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            val dpd = DatePickerDialog(this, { _, year, monthOfYear, dayOfMonth ->
                 date_picker.setTextColor(getColor(android.R.color.black))
                 next.alpha = 1f
                 next.setTextIsSelectable(true)
