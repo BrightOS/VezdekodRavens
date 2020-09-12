@@ -15,6 +15,8 @@ class TargetAdvancedActivity : AppCompatActivity() {
     override fun onResume() {
         date_title.visibility = View.GONE
         date_picker.visibility = View.GONE
+        next.setTextIsSelectable(false)
+        next.alpha = 0.4f
         super.onResume()
     }
 
@@ -29,11 +31,13 @@ class TargetAdvancedActivity : AppCompatActivity() {
                     date_title.visibility = View.GONE
                     date_picker.visibility = View.GONE
                     next.alpha = 1f
+                    next.setTextIsSelectable(true)
                 }
                 R.id.until -> {
                     date_title.visibility = View.VISIBLE
                     date_picker.visibility = View.VISIBLE
                     next.alpha = 0.4f
+                    next.setTextIsSelectable(false)
                 }
             }
         }
@@ -48,6 +52,7 @@ class TargetAdvancedActivity : AppCompatActivity() {
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                 date_picker.setTextColor(getColor(android.R.color.black))
                 next.alpha = 1f
+                next.setTextIsSelectable(true)
                 if (year == c.get(Calendar.YEAR))
                     date_picker.text = "" + dayOfMonth + " " + months[monthOfYear]
                 else
