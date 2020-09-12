@@ -59,7 +59,7 @@
                 android:layout_height="140dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
-                android:background="@drawable/cover"
+                android:background="@drawable/test"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -95,19 +95,21 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:visibility="visible"
-                app:layout_constraintStart_toStartOf="@id/choose_photo"
-                app:layout_constraintEnd_toEndOf="@id/choose_photo"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/choose_photo"
-                app:layout_constraintTop_toTopOf="@id/choose_photo"
-                app:cardCornerRadius="10dp">
+                app:layout_constraintEnd_toEndOf="@id/choose_photo"
+                app:layout_constraintStart_toStartOf="@id/choose_photo"
+                app:layout_constraintTop_toTopOf="@id/choose_photo">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src=""/>
+                        android:src="" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -131,11 +133,11 @@
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/edittext_background"
                 android:hint="Название сбора"
-                android:maxLines="1"
                 android:lineSpacingExtra="1sp"
+                android:maxLines="1"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"
                 android:paddingTop="12dp"
+                android:paddingEnd="12dp"
                 android:paddingBottom="12dp"
                 android:textColorHint="#818C99"
                 android:textSize="16sp"
@@ -164,13 +166,13 @@
                 android:background="@drawable/edittext_background"
                 android:hint="Сколько нужно собрать?"
                 android:lineSpacingExtra="1sp"
+                android:maxLines="1"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"
                 android:paddingTop="12dp"
+                android:paddingEnd="12dp"
                 android:paddingBottom="12dp"
                 android:textColorHint="#818C99"
                 android:textSize="16sp"
-                android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/second_title" />
@@ -196,13 +198,13 @@
                 android:background="@drawable/edittext_background"
                 android:hint="Например, лечение человека"
                 android:lineSpacingExtra="1sp"
+                android:maxLines="1"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"
                 android:paddingTop="12dp"
+                android:paddingEnd="12dp"
                 android:paddingBottom="12dp"
                 android:textColorHint="#818C99"
                 android:textSize="16sp"
-                android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/third_title" />
@@ -229,8 +231,8 @@
                 android:hint="На что пойдут деньги и как они кому-то помогут?"
                 android:lineSpacingExtra="1sp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"
                 android:paddingTop="12dp"
+                android:paddingEnd="12dp"
                 android:paddingBottom="12dp"
                 android:textColorHint="#818C99"
                 android:textSize="16sp"
@@ -257,13 +259,13 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/ic_arrow_down"
                 android:lineSpacingExtra="1sp"
                 android:paddingStart="12dp"
                 android:paddingTop="12dp"
                 android:paddingEnd="12dp"
                 android:paddingBottom="12dp"
                 android:text="Счёт VK Pay \u00B7 1234"
-                android:drawableEnd="@drawable/ic_arrow_down"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
